@@ -1,0 +1,31 @@
+Rebasing vs Merging in Git:
+
+Merging:
+Merging is a way to combine the changes from one branch (e.g., feature) into another (e.g., main).
+It creates a new commit called a "merge commit" that ties together the histories of both branches.
+
+Pros:
+- Preserves the complete history of changes.
+- Clear record of when branches were merged.
+
+Cons:
+- History can become cluttered with too many merge commits.
+
+Example:
+$ git checkout main
+$ git merge feature-branch
+
+Rebasing:
+Rebasing is a way to move or replay commits from one branch onto another.
+Instead of creating a merge commit, Git re-applies each commit from the feature branch onto the base branch.
+
+Pros:
+- Creates a cleaner, linear commit history.
+- Useful before merging to avoid unnecessary merge commits.
+
+Cons:
+- Rewriting history can be risky if the branch has already been shared.
+
+Example:
+$ git checkout feature-branch
+$ git rebase main
