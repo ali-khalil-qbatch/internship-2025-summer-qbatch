@@ -1,0 +1,33 @@
+🔷 What is Git Merge?
+* Merging is the process of combining the changes from one branch into another.
+
+For example, when you finish work on a feature branch and want to bring those changes into the main branch, you can use:
+
+bash
+git merge feature-branch
+* Git will create a merge commit that connects both branches.
+* It preserves the full history of both branches.
+* Useful for teams working on the same codebase — keeps track of all the merges.
+✅ Pros:
+* Keeps a detailed and accurate history
+* Safer when working collaboratively
+❌ Cons:
+Can lead to a messy commit history with many merge commits
+
+
+🔷 What is Git Rebase?
+* Rebasing takes your branch and "replays" its commits on top of another branch, usually main.
+
+For example:
+bash
+git checkout feature-branch
+git rebase main
+* This makes it look like you started your work from the latest commit on main.
+* It results in a clean, linear history without merge commits.
+* Often used before merging a feature to make the history easier to read.
+✅ Pros:
+* Clean, straight-line commit history
+* Makes git log easier to follow
+❌ Cons:
+* Rewrites commit history (not safe for shared/public branches)
+* Can be dangerous if not used carefully
