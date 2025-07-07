@@ -26,7 +26,7 @@ git rebase main
 **Key Points:**
 - Rewrites commit history for a cleaner, linear project history.
 - Does not create a merge commit.
-- Can make history easier to read, but should be used with caution (especially on shared branches).
+- Can make history easier to read, but should be used with caution (especially on shared branches). 
 
 ### Summary Table
 |            | Merging                        | Rebasing                          |
